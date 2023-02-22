@@ -1,18 +1,24 @@
-import firebase from "firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDG2mnrOkS0tafAjU1SqzXfaJS7AMKMSMg",
-  authDomain: "quora-clone-akky.firebaseapp.com",
-  projectId: "quora-clone-akky",
-  storageBucket: "quora-clone-akky.appspot.com",
-  messagingSenderId: "902318949999",
-  appId: "1:902318949999:web:8df2b97a20eece0209ef9a",
-  measurementId: "G-LJBYVXT22Z",
-};
+    apiKey: "AIzaSyDv8Pd1kxXS87OBt3abara1cJfFvtG2xHM",
+    authDomain: "quora-clone-14366.firebaseapp.com",
+    projectId: "quora-clone-14366",
+    storageBucket: "quora-clone-14366.appspot.com",
+    messagingSenderId: "612555366690",
+    appId: "1:612555366690:web:f33a2ccba3cb331e63057b",
+    measurementId: "G-JYD82BCE34"
+  };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
-const db = firebaseApp.firestore();
+  const firebaseApp =firebase.initializeApp(firebaseConfig);
+  const auth =firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
 
-export { auth, provider };
-export default db;
+  const db = firebaseApp.firestore();
+
+  export{auth, provider};
+  export default db;

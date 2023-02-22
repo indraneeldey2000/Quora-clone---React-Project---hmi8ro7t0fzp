@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import "./Login.css";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { auth, provider } from "../../firebase";
+import React,{ useState } from 'react'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { auth } from '../../firebase';
+import { provider } from '../../firebase';
+import './Login.css'
 
-function Login() {
+
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -48,9 +50,9 @@ function Login() {
         <div className="login__desc">
           <p>A Place to Share knowledge and better understand the world</p>
           <p style={{ color: "royalblue", fontSize: "25px" }}>
-            HandCrafted with ❤️ by{" "}
+            Coded with ❤️ by {"Indraneel Dey"}
           </p>
-          <h3>Code With Akky</h3>
+          <h3>Developed as Project for Newton School</h3>
         </div>
         <div className="login__auth">
           <div className="login__authOptions">
@@ -129,11 +131,9 @@ function Login() {
           <p>Privacy</p>
           <p>Terms</p>
           <p>Contact</p>
-          <p>&copy; Quora Fake Inc. 2021</p>
+          <p>&copy; Quora Inc. 2021</p>
         </div>
       </div>
     </div>
   );
 }
-
-export default Login;
